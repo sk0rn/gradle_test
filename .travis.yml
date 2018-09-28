@@ -24,8 +24,8 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-install:
-  - gradle wrapper --gradle-version 4.10.2
+before_install:
+ - chmod +x gradlew
 
 
 script:

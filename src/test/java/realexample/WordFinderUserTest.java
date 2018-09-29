@@ -22,9 +22,9 @@ class WordFinderUserTest {
     private static final String WORD = "";
     private static final String FIRST_SENTENCE = "Doing Test";
     private static final String SECOND_SENTENCE = "Let's do it";
+    private static final Logger LOGGER = Logger.getLogger(WordFinderUserTest.class);
     private WordFinderUser wordFinderUser;
     private WordFinder mock = Mockito.mock(WordFinder.class);
-    private static final Logger LOGGER = Logger.getLogger(WordFinderUserTest.class);
 
     // В этом тесте будет проверяться логика работы нашего класса WordFinderUser,
     // ипользующего в себе методы класса, реализующего интерфейс WordFinder.

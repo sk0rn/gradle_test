@@ -1,6 +1,7 @@
 package realexample;
 
 
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -19,10 +20,11 @@ import static org.mockito.Mockito.*;
 class WordFinderUserTest {
     private static final String FILE_ANY = "file://any";
     private static final String WORD = "";
-    private WordFinderUser wordFinderUser;
-    private WordFinder mock = Mockito.mock(WordFinder.class);
     private static final String FIRST_SENTENCE = "Doing Test";
     private static final String SECOND_SENTENCE = "Let's do it";
+    private WordFinderUser wordFinderUser;
+    private WordFinder mock = Mockito.mock(WordFinder.class);
+    private static final Logger LOGGER = Logger.getLogger(WordFinderUserTest.class);
 
     // В этом тесте будет проверяться логика работы нашего класса WordFinderUser,
     // ипользующего в себе методы класса, реализующего интерфейс WordFinder.
@@ -68,7 +70,7 @@ class WordFinderUserTest {
             // вызвааем тестиремый метод
             wordFinderUser.doWord(FILE_ANY, WORD);
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            LOGGER.error("something failed", e);
         }
         // провереряем, что методы не были вызваны ни разу
         verify(mock, times(0)).checkIfWordInSentence(any(),any());
@@ -92,7 +94,7 @@ class WordFinderUserTest {
             // вызов тестируемого метода
             wordFinderUser.doWord(FILE_ANY, WORD);
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            LOGGER.error("something failed", e);
         }
         // для первого предложения метод должен вызваться, для второго нет
         verify(mock, times(1)).writeSentenceToResult(FIRST_SENTENCE);
@@ -113,7 +115,7 @@ class WordFinderUserTest {
             // запускаем метод (FILE_ANY это и есть аргумент с ресурсом)
             wordFinderUser.doWord(FILE_ANY, WORD);
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            LOGGER.error("something failed", e);
         }
 
         // вызываем метод, использующий url с ресурсом

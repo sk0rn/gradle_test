@@ -1,12 +1,13 @@
-package realExample;
+package realexample;
 
 import java.net.URL;
+import java.util.Collections;
 import java.util.Set;
 
-public class wordFinderImpl implements WordFinder {
+public class WordFinderImpl implements WordFinder {
     @Override
     public Set<String> getSentence(URL resource) {
-        return null;
+        return Collections.emptySet();
     }
 
     @Override
@@ -16,6 +17,6 @@ public class wordFinderImpl implements WordFinder {
 
     @Override
     public void writeSentenceToResult(String sentence) {
-
+        // some code
     }
 }

@@ -1,4 +1,4 @@
-package realExample;
+package realexample;
 
 import java.net.URL;
 import java.util.Set;

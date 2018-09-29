@@ -1,4 +1,4 @@
-package realExample;
+package realexample;
 
 
 import org.junit.jupiter.api.BeforeEach;
@@ -21,8 +21,8 @@ class WordFinderUserTest {
     private static final String WORD = "";
     private WordFinderUser wordFinderUser;
     private WordFinder mock = Mockito.mock(WordFinder.class);
-    private final static String FIRST_SENTENCE = "Doing Test";
-    private final static String SECOND_SENTENCE = "Let's do it";
+    private static final String FIRST_SENTENCE = "Doing Test";
+    private static final String SECOND_SENTENCE = "Let's do it";
 
     // В этом тесте будет проверяться логика работы нашего класса WordFinderUser,
     // ипользующего в себе методы класса, реализующего интерфейс WordFinder.
@@ -34,7 +34,7 @@ class WordFinderUserTest {
     //вернет то или иное значение, и будут ли вызываться методы заглушки, в зависимости
     // от того что мы делаем у себя в классе
 
-    // src\main\java\realExample\WordFinderUser.java
+    // src\main\java\realexample\WordFinderUser.java
 
 
 

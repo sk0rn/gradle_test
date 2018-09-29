@@ -1,7 +1,13 @@
+import org.apache.log4j.Logger;
+
 public class Main {
+
+    private static final Logger LOGGER = Logger.getLogger(Main.class);
+
     public static void main(String[] args) {
 
-        System.out.println("Hello, Gradle!");
-        System.out.println("Hello, Travis!");
+        LOGGER.info("Hello, Gradle!");
+        LOGGER.info("Hello, Travis!");
+
     }
 }

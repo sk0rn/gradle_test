@@ -25,4 +25,7 @@ hs_err_pid*
 .idea/*
 *.iml
 
+#log4j prop
+src/main/resources/log4j.properties
+
 

@@ -31,7 +31,8 @@ addons:
   sonarcloud:
     organization: "k0rn-github"
     token:
-      secure: " 8cdcb4be582f4f1060c65d1c5b285f16f1b14ffc"
+      secure: "8ee9c2f0f42f9e0301b0a3d72839fba75c8a7353"
+
 
 script:
   - ./gradlew assemble

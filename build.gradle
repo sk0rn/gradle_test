@@ -18,15 +18,14 @@ dependencies {
     compile group: 'com.github.jsimone', name: 'webapp-runner', version: '8.5.11.3'
 }
 
+task hello << {
+    println 'hello, Gradle'
+}
+
 test {
     useJUnitPlatform()
-    afterSuite { desc, result ->
-        if (!desc.parent)
-            println("${result.resultType} " +
-                    "(${result.testCount} tests, " +
-                    "${result.successfulTestCount} successes, " +
-                    "${result.failedTestCount} failures, " +
-                    "${result.skippedTestCount} skipped)")
+    testLogging {
+        events "PASSED", "STARTED", "FAILED", "SKIPPED"
     }
 }
 

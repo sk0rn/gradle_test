@@ -1,6 +1,5 @@
 package realexample;
 
-import mypackage.Main;
 import org.apache.log4j.Logger;
 
 import java.net.MalformedURLException;
@@ -20,7 +19,7 @@ public class WordFinderUser {
         try {
             url = new URL(resource);
         } catch (MalformedURLException e) {
-            LOGGER.error("something failed", e);
+            LOGGER.error(e);
             throw e;
         }
         Set<String> sentences = wordFinder.getSentence(url);

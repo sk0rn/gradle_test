@@ -70,7 +70,7 @@ class WordFinderUserTest {
             // вызвааем тестиремый метод
             wordFinderUser.doWord(FILE_ANY, WORD);
         } catch (MalformedURLException e) {
-            LOGGER.error("something failed", e);
+            LOGGER.error(e);
         }
         // провереряем, что методы не были вызваны ни разу
         verify(mock, times(0)).checkIfWordInSentence(any(),any());
@@ -94,7 +94,7 @@ class WordFinderUserTest {
             // вызов тестируемого метода
             wordFinderUser.doWord(FILE_ANY, WORD);
         } catch (MalformedURLException e) {
-            LOGGER.error("something failed", e);
+            LOGGER.error(e);
         }
         // для первого предложения метод должен вызваться, для второго нет
         verify(mock, times(1)).writeSentenceToResult(FIRST_SENTENCE);
@@ -115,7 +115,7 @@ class WordFinderUserTest {
             // запускаем метод (FILE_ANY это и есть аргумент с ресурсом)
             wordFinderUser.doWord(FILE_ANY, WORD);
         } catch (MalformedURLException e) {
-            LOGGER.error("something failed", e);
+            LOGGER.error(e);
         }
 
         // вызываем метод, использующий url с ресурсом

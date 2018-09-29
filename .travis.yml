@@ -29,9 +29,9 @@ before_install:
 
 addons:
   sonarcloud:
-    organization: "k0rn-github"
+    organization: $SONARCLOUD_ORGANIZATION
     token:
-      secure: "8ee9c2f0f42f9e0301b0a3d72839fba75c8a7353"
+      secure: $SONARCLOUD_TOKEN
 
 
 script:

@@ -2,6 +2,10 @@ plugins {
     id 'java'
 }
 
+plugins {
+    id "org.sonarqube" version "2.6"
+}
+
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -9,6 +13,8 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
 }
+
+
 
 dependencies {
 

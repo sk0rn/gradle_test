@@ -27,8 +27,15 @@ cache:
 before_install:
  - chmod +x gradlew
 
+addons:
+  sonarcloud:
+    organization: "k0rn-github"
+    token:
+      secure: " 8cdcb4be582f4f1060c65d1c5b285f16f1b14ffc"
 
 script:
   - ./gradlew assemble
   - ./gradlew check
+  - sonar-scanner
+  - rm -rf .scannerwork
 
